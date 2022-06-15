@@ -75,7 +75,13 @@
       "sstream": "cpp",
       "stdexcept": "cpp",
       "streambuf": "cpp",
-      "typeinfo": "cpp"
+      "typeinfo": "cpp",
+      "bitset": "cpp",
+      "optional": "cpp",
+      "semaphore": "cpp",
+      "stop_token": "cpp",
+      "thread": "cpp",
+      "variant": "cpp"
     }
   }
 }

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.23)
 project(libfib LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -8,15 +8,20 @@ enable_testing()
 add_subdirectory(third_party/catch2)
 
 add_library(fib SHARED fib.cc)
-set_target_properties(fib PROPERTIES PUBLIC_HEADER fib.hh)
-target_include_directories(fib INTERFACE
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-    $<INSTALL_INTERFACE:include>
+target_sources(fib PUBLIC
+    FILE_SET HEADERS
+    FILES fib.hh
 )
+#set_target_properties(fib PROPERTIES PUBLIC_HEADER fib.hh)
+#target_include_directories(fib INTERFACE
+#    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+#    $<INSTALL_INTERFACE:include>
+#)
 
 install(
     TARGETS fib
     EXPORT libfib-config
+    FILE_SET HEADERS
 )
 install(
     EXPORT libfib-config
