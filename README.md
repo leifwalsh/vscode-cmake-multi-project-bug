@@ -1,0 +1,1 @@
+# vscode-cmake-multi-project-bug
