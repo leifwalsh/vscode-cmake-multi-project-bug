@@ -10,7 +10,7 @@ mkdir -p lib/build
         -DCMAKE_BUILD_TYPE=Debug \
         -DCMAKE_CXX_COMPILER=clang++ \
         ../src &&
-    ninja install
+    make install
 )
 mkdir -p app/build
 (cd app/build;
@@ -20,5 +20,5 @@ mkdir -p app/build
         -DCMAKE_BUILD_TYPE=Debug \
         -DCMAKE_CXX_COMPILER=clang++ \
         ../src &&
-    ninja install
+    make install
 )
