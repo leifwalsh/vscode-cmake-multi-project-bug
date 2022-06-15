@@ -13,5 +13,10 @@
 			"name": "lib"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cmake.buildDirectory": "${workspaceFolder}/build",
+		"cmake.sourceDirectory": "${workspaceFolder}/src",
+		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+		"cmake.generator": "Unix Makefiles"
+	}
 }
