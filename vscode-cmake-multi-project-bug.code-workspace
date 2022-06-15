@@ -18,6 +18,6 @@
 		"cmake.buildDirectory": "${workspaceFolder}/build",
 		"cmake.installPrefix": "${workspaceFolder}/dist",
 		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-		"cmake.generator": "Unix Makefiles",
+		"cmake.generator": "Ninja",
 	}
 }
